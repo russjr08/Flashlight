@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EBDB90F19410CC000DEFFDB /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBDB90E19410CC000DEFFDB /* NewViewController.swift */; };
 		0EC1D4E7193FD5F600B281EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC1D4E6193FD5F600B281EF /* AppDelegate.swift */; };
 		0EC1D4E9193FD5F600B281EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC1D4E8193FD5F600B281EF /* ViewController.swift */; };
 		0EC1D4EC193FD5F600B281EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC1D4EA193FD5F600B281EF /* Main.storyboard */; };
 		0EC1D4EE193FD5F600B281EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC1D4ED193FD5F600B281EF /* Images.xcassets */; };
 		0EC1D4FA193FD5F600B281EF /* FlashlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC1D4F9193FD5F600B281EF /* FlashlightTests.swift */; };
+		0EDDF50D1941016E00CF3283 /* Agent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDDF50A1941016400CF3283 /* Agent.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,9 +24,24 @@
 			remoteGlobalIDString = 0EC1D4E0193FD5F600B281EF;
 			remoteInfo = Flashlight;
 		};
+		0EDDF5091941016400CF3283 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0EDDF5041941016400CF3283 /* Agent.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8A90A2A1193D5613001D7C92;
+			remoteInfo = Agent;
+		};
+		0EDDF50B1941016400CF3283 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0EDDF5041941016400CF3283 /* Agent.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8A90A2AC193D5613001D7C92;
+			remoteInfo = AgentTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EBDB90E19410CC000DEFFDB /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		0EC1D4E1193FD5F600B281EF /* Flashlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC1D4E5193FD5F600B281EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EC1D4E6193FD5F600B281EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +51,7 @@
 		0EC1D4F3193FD5F600B281EF /* FlashlightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashlightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC1D4F8193FD5F600B281EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EC1D4F9193FD5F600B281EF /* FlashlightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashlightTests.swift; sourceTree = "<group>"; };
+		0EDDF5041941016400CF3283 /* Agent.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Agent.xcodeproj; path = ../../../../../Development/agent/Agent.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EDDF50D1941016E00CF3283 /* Agent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +76,7 @@
 		0EC1D4D8193FD5F600B281EF = {
 			isa = PBXGroup;
 			children = (
+				0EDDF5041941016400CF3283 /* Agent.xcodeproj */,
 				0EC1D4E3193FD5F600B281EF /* Flashlight */,
 				0EC1D4F6193FD5F600B281EF /* FlashlightTests */,
 				0EC1D4E2193FD5F600B281EF /* Products */,
@@ -80,6 +100,7 @@
 				0EC1D4EA193FD5F600B281EF /* Main.storyboard */,
 				0EC1D4ED193FD5F600B281EF /* Images.xcassets */,
 				0EC1D4E4193FD5F600B281EF /* Supporting Files */,
+				0EBDB90E19410CC000DEFFDB /* NewViewController.swift */,
 			);
 			path = Flashlight;
 			sourceTree = "<group>";
@@ -107,6 +128,15 @@
 				0EC1D4F8193FD5F600B281EF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0EDDF5051941016400CF3283 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0EDDF50A1941016400CF3283 /* Agent.framework */,
+				0EDDF50C1941016400CF3283 /* AgentTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +207,12 @@
 			mainGroup = 0EC1D4D8193FD5F600B281EF;
 			productRefGroup = 0EC1D4E2193FD5F600B281EF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0EDDF5051941016400CF3283 /* Products */;
+					ProjectRef = 0EDDF5041941016400CF3283 /* Agent.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0EC1D4E0193FD5F600B281EF /* Flashlight */,
@@ -184,6 +220,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0EDDF50A1941016400CF3283 /* Agent.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Agent.framework;
+			remoteRef = 0EDDF5091941016400CF3283 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0EDDF50C1941016400CF3283 /* AgentTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AgentTests.xctest;
+			remoteRef = 0EDDF50B1941016400CF3283 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0EC1D4DF193FD5F600B281EF /* Resources */ = {
@@ -209,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EBDB90F19410CC000DEFFDB /* NewViewController.swift in Sources */,
 				0EC1D4E9193FD5F600B281EF /* ViewController.swift in Sources */,
 				0EC1D4E7193FD5F600B281EF /* AppDelegate.swift in Sources */,
 			);
@@ -406,6 +460,7 @@
 				0EC1D4FF193FD5F600B281EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EC1D500193FD5F600B281EF /* Build configuration list for PBXNativeTarget "FlashlightTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +469,7 @@
 				0EC1D502193FD5F600B281EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

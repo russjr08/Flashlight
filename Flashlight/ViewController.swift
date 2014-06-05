@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Agent
 
 class ViewController: UIViewController {
     
@@ -59,14 +60,21 @@ class ViewController: UIViewController {
         println("YOU TOGGLED THE FUCKING BUTTON")
 //        var alert = new UIAlertView(title: "FLASH ALL THE LIGHTS", message: "Flash toggled", cancelButtonTitle: "Okay")
         
-        var alert = UIAlertController(title: "The Damn Button", message: "You clicked the freaking button!", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "GET OUT OF MY FUCKING FACE!", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+        let req = Agent.get("http://api.kronosad.com/Modpacks/TMPI.json")
+        req.end({ (error: NSError?, response: NSHTTPURLResponse?, data: AnyObject?) -> () in
+            // react to the result of your request
+            println(data as? String)
+            var alert = UIAlertController(title: "The Damn Button", message: data as String, preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "GET OUT OF MY FUCKING FACE!", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        })
+        
+        
+        
         
         
         
         
     }
-
 }
 
