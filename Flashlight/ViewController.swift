@@ -7,12 +7,16 @@
 //
 
 import UIKit
-import Agent
+
+import AVFoundation
+
 
 class ViewController: UIViewController {
     
     
     @IBOutlet var progressBar : UIProgressView
+    
+    @IBOutlet var toggleFlash : UISwitch
     
     var progDown = false
     
@@ -56,24 +60,34 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func btnFlash(sender : UISwitch) {
-        println("YOU TOGGLED THE FUCKING BUTTON")
-//        var alert = new UIAlertView(title: "FLASH ALL THE LIGHTS", message: "Flash toggled", cancelButtonTitle: "Okay")
+    @IBAction func btnFlash(sender : UISwitch) {        
         
-        let req = Agent.get("http://api.kronosad.com/Modpacks/TMPI.json")
-        req.end({ (error: NSError?, response: NSHTTPURLResponse?, data: AnyObject?) -> () in
-            // react to the result of your request
-            println(data as? String)
-            var alert = UIAlertController(title: "The Damn Button", message: data as String, preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "GET OUT OF MY FUCKING FACE!", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
-        })
+        var device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        
+        if(device){
+            if(device.hasFlash && device.hasTorch){
+                if(toggleFlash.on){
+                    device.setTorchModeOnWithLevel(1, error: nil)
+                    println("Activated Torch")
+                } else {
+                    device.setTorchModeOnWithLevel(0, error: nil)
+                    println("Deactivated Torch")
+                }
+            } else {
+                noFlashAvailable()
+            }
+        } else {
+            noFlashAvailable()
+        }
         
         
+    }
+    
+    func noFlashAvailable() {
         
-        
-        
-        
+        var alert = UIAlertController(title: "Unsupported Device", message: "Your device does not have a torch/flash!", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
         
     }
 }

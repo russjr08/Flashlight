@@ -20,7 +20,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch appearanceType="aqua" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="PXJ-MC-oiR">
+                            <switch appearanceType="aqua" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="PXJ-MC-oiR">
                                 <rect key="frame" x="136" y="204" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -47,6 +47,7 @@
                     <navigationItem key="navigationItem" id="GFB-TW-i9Q"/>
                     <connections>
                         <outlet property="progressBar" destination="deN-VU-FjI" id="WtR-3v-aK5"/>
+                        <outlet property="toggleFlash" destination="PXJ-MC-oiR" id="3bF-qs-X1M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
